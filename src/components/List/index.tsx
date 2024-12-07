@@ -63,6 +63,10 @@ export const List = () => {
     Number(data?.meta?.pagination?.page) <
     Number(data?.meta?.pagination?.pages);
 
+  if ((data?.data || "")?.length === 0) {
+    return <div className="text-lg opacity-60 mt-10">No Data Found!</div>;
+  }
+
   return (
     <Flex
       justify="start"
